@@ -1,31 +1,48 @@
-/* ===== RoNoBot.Core — Liquid Glass Theme Override ===== */
-/* 覆写 LLBot WebUI 为液态玻璃风格 + 深色蓝紫渐变背景 */
+/* ===== RoNoBot.Core — Liquid Glass Theme v2 ===== */
+/* 仿 Xiaomi Glass SystemUI (MrBocchi) 控制中心液态玻璃质感 */
 
-/* 1. 全局背景 + 玻璃遮罩 */
-:root {
-  --glass-bg: rgba(255, 255, 255, 0.06);
-  --glass-border: rgba(255, 255, 255, 0.10);
-  --accent-glass: #6c8cff;
+/* ── SVG 液态折射滤镜 ── */
+html::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(139, 92, 246, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(59, 130, 246, 0.10) 0%, transparent 50%);
+  pointer-events: none;
 }
 
+/* ── 全局背景 ── */
 html {
   background: linear-gradient(135deg, #0f0c29 0%, #1a1a4e 30%, #24243e 60%, #0f0c29 100%) !important;
   min-height: 100vh;
 }
 
 body {
-  background: linear-gradient(135deg, #0f0c29 0%, #1a1a4e 30%, #24243e 60%, #0f0c29 100%) !important;
+  background: transparent !important;
   min-height: 100vh;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif !important;
 }
 
-/* 暗色模式覆盖（更深） */
-.dark html,
-.dark body {
+/* 暗色模式更深 */
+.dark body,
+.dark html {
   background: #050510 !important;
 }
 
-/* 2. 卡片 → 液态玻璃 */
-[class*="card"]:not([class*="flat"]):not([class*="outline"]),
+/* ── 标题栏 / 侧边栏 — 玻璃侧栏 ── */
+[class*="sidebar"],
+[class*="Sidebar"] {
+  background: rgba(255, 255, 255, 0.04) !important;
+  backdrop-filter: blur(48px) saturate(1.4) !important;
+  -webkit-backdrop-filter: blur(48px) saturate(1.4) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+/* ── 所有卡片 — 液态玻璃 ── */
+[class*="card"],
 [class*="Card"],
 [class*="panel"],
 [class*="Panel"],
@@ -34,30 +51,32 @@ body {
 [class*="dialog"],
 [class*="Dialog"] {
   background: rgba(255, 255, 255, 0.06) !important;
-  backdrop-filter: blur(32px) !important;
-  -webkit-backdrop-filter: blur(32px) !important;
+  backdrop-filter: blur(32px) saturate(1.3) !important;
+  -webkit-backdrop-filter: blur(32px) saturate(1.3) !important;
   border: 1px solid rgba(255, 255, 255, 0.08) !important;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.30) !important;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
   border-radius: 1.25rem !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
 }
 
-/* 3. 侧边栏 → 玻璃 */
-[class*="sidebar"],
-[class*="Sidebar"] {
-  background: rgba(255, 255, 255, 0.04) !important;
-  backdrop-filter: blur(40px) !important;
-  -webkit-backdrop-filter: blur(40px) !important;
-  border-right: 1px solid rgba(255, 255, 255, 0.06) !important;
+[class*="card"]:hover,
+[class*="Card"]:hover {
+  box-shadow:
+    0 12px 48px rgba(0, 0, 0, 0.30),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+  transform: translateY(-1px);
 }
 
-/* 4. 导航项 → 玻璃胶囊 */
+/* ── 导航项 — 玻璃胶囊 ── */
 [class*="nav-item"],
 [class*="NavItem"],
 nav a, nav button,
 [class*="menu-item"],
 [class*="MenuItem"] {
   border-radius: 9999px !important;
-  transition: all 0.15s ease !important;
+  transition: all 0.2s cubic-bezier(0.25, 1.2, 0.4, 1) !important;
 }
 
 [class*="nav-item"]:hover,
@@ -65,6 +84,7 @@ nav a, nav button,
 nav a:hover,
 [class*="menu-item"]:hover {
   background: rgba(255, 255, 255, 0.10) !important;
+  transform: scale(1.03);
 }
 
 [class*="nav-item"][class*="active"],
@@ -72,64 +92,205 @@ nav a:hover,
 nav a.active {
   background: linear-gradient(135deg, #6c8cff, #a78bfa) !important;
   box-shadow: 0 8px 24px rgba(108, 140, 255, 0.30) !important;
+  color: #fff !important;
 }
 
-/* 5. 按钮 → 玻璃胶囊 */
+/* ── 按钮 — 玻璃胶囊 + 悬浮缩放 ── */
 button:not([class*="icon"]):not([class*="Icon"]):not([class*="link"]):not([class*="Link"]):not([class*="ghost"]):not([class*="Ghost"]) {
   border-radius: 9999px !important;
-  transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+  transition: transform 0.15s cubic-bezier(0.25, 1.3, 0.4, 1), box-shadow 0.15s ease, background 0.2s ease !important;
 }
 
 button:not([class*="icon"]):not([class*="Icon"]):not([class*="link"]):not([class*="Link"]):not([class*="ghost"]):not([class*="Ghost"]):hover {
-  transform: scale(1.04);
-  box-shadow: 0 8px 24px rgba(108, 140, 255, 0.25) !important;
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(108, 140, 255, 0.20) !important;
 }
 
 button:not([class*="icon"]):not([class*="Icon"]):not([class*="link"]):not([class*="Link"]):not([class*="ghost"]):not([class*="Ghost"]):active {
-  transform: scale(0.97);
+  transform: scale(0.96);
 }
 
-/* 6. 主按钮 → 蓝紫渐变 */
+/* ── 主要按钮 — 蓝紫渐变 ── */
 [class*="primary"],
 [class*="Primary"]:not([class*="ghost"]):not([class*="Ghost"]):not([class*="outline"]):not([class*="Outline"]) {
   background: linear-gradient(135deg, #6c8cff, #a78bfa) !important;
   border: none !important;
   color: #fff !important;
+  box-shadow: 0 4px 16px rgba(108, 140, 255, 0.25) !important;
 }
 
-/* 7. 输入框 → 玻璃输入 */
-input, textarea, select, [class*="input"], [class*="Input"] {
+/* ── 图标按钮 ── */
+[class*="icon-btn"],
+[class*="IconButton"] {
+  border-radius: 0.75rem !important;
   background: rgba(255, 255, 255, 0.06) !important;
-  backdrop-filter: blur(12px) !important;
-  -webkit-backdrop-filter: blur(12px) !important;
+  backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  transition: transform 0.15s ease, background 0.15s ease !important;
+}
+
+[class*="icon-btn"]:hover,
+[class*="IconButton"]:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+  transform: scale(1.10);
+}
+
+/* ── 输入框 — 玻璃输入 ── */
+input:not([type="checkbox"]):not([type="radio"]),
+textarea, select,
+[class*="input-field"],
+[class*="Input"]:not([class*="checkbox"]):not([class*="switch"]) {
+  background: rgba(255, 255, 255, 0.06) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
   border: 1px solid rgba(255, 255, 255, 0.10) !important;
   border-radius: 0.75rem !important;
   color: #fff !important;
   transition: border-color 0.15s ease, box-shadow 0.15s ease !important;
 }
 
-input:focus, textarea:focus, select:focus, [class*="input"]:focus {
+input:not([type="checkbox"]):not([type="radio"]):focus,
+textarea:focus, select:focus,
+[class*="input-field"]:focus,
+[class*="Input"]:focus {
   border-color: #6c8cff !important;
-  box-shadow: 0 0 0 3px rgba(108, 140, 255, 0.20) !important;
+  box-shadow: 0 0 0 3px rgba(108, 140, 255, 0.15) !important;
   outline: none !important;
 }
 
-/* 8. 强调色替换：粉色 → 蓝紫 */
-[style*="--pink-accent"] {
-  --pink-accent: #6c8cff !important;
-  --pink-accent-hover: #8fa6ff !important;
+/* ── Switch 开关 — 小米风格 ── */
+input[type="checkbox"],
+[class*="switch"],
+[class*="toggle"],
+[role="switch"] {
+  appearance: none !important;
+  width: 3rem !important;
+  height: 1.75rem !important;
+  border-radius: 999px !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+  cursor: pointer !important;
+  position: relative !important;
+  transition: background 0.2s ease !important;
+  flex-shrink: 0 !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
 }
 
-/* 9. 登录/加载对话框 → 玻璃叠加 */
+input[type="checkbox"]::before,
+[class*="switch"]::before,
+[class*="toggle"]::before,
+[role="switch"]::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 1.375rem;
+  height: 1.375rem;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+input[type="checkbox"]:checked,
+[class*="switch"]:checked,
+[class*="toggle"]:checked,
+[role="switch"][aria-checked="true"] {
+  background: linear-gradient(135deg, #6c8cff, #a78bfa) !important;
+}
+
+input[type="checkbox"]:checked::before,
+[class*="switch"]:checked::before,
+[class*="toggle"]:checked::before,
+[role="switch"][aria-checked="true"]::before {
+  transform: translateX(1.375rem);
+}
+
+/* ── 下拉菜单/Select ── */
+[class*="select"],
+[class*="Select"],
+[class*="dropdown"],
+[class*="Dropdown"] {
+  border-radius: 0.75rem !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  backdrop-filter: blur(24px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+/* ── 选项卡/标签 ── */
+[class*="tab"],
+[class*="Tab"] {
+  border-radius: 9999px !important;
+}
+
+[class*="tab"][class*="active"],
+[class*="Tab"][class*="active"] {
+  background: linear-gradient(135deg, #6c8cff, #a78bfa) !important;
+  color: #fff !important;
+}
+
+/* ── 气泡/Toast ── */
+[class*="toast"],
+[class*="Toast"],
+[class*="notification"],
+[class*="Notification"] {
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(40px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.10) !important;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.30) !important;
+  border-radius: 1rem !important;
+}
+
+/* ── 遮罩/Overlay ── */
 [class*="overlay"],
 [class*="Overlay"],
 [class*="backdrop"],
 [class*="Backdrop"] {
-  backdrop-filter: blur(8px) brightness(0.5) !important;
-  -webkit-backdrop-filter: blur(8px) brightness(0.5) !important;
+  backdrop-filter: blur(12px) brightness(0.45) saturate(0.5) !important;
+  -webkit-backdrop-filter: blur(12px) brightness(0.45) saturate(0.5) !important;
 }
 
-/* 10. 滚动条 */
+/* ── 分割线 ── */
+hr, [class*="divider"], [class*="Divider"] {
+  border-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+/* ── 进度条 ── */
+[class*="progress"],
+[class*="Progress"] {
+  border-radius: 999px !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  overflow: hidden !important;
+}
+
+[class*="progress"] > [class*="bar"],
+[class*="Progress"] > [class*="bar"] {
+  background: linear-gradient(90deg, #6c8cff, #a78bfa) !important;
+  border-radius: 999px !important;
+}
+
+/* ── 徽章/Badge ── */
+[class*="badge"],
+[class*="Badge"] {
+  border-radius: 9999px !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+/* ── 表格 ── */
+table, [class*="table"], [class*="Table"] {
+  border-radius: 1rem !important;
+  overflow: hidden !important;
+}
+
+th {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+}
+
+/* ── 滚动条 ── */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -142,41 +303,40 @@ input:focus, textarea:focus, select:focus, [class*="input"]:focus {
 ::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.10);
   border-radius: 3px;
+  transition: background 0.2s;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.20);
 }
 
-/* 11. 徽章/Badge */
-[class*="badge"],
-[class*="Badge"] {
-  border-radius: 9999px !important;
-  backdrop-filter: blur(8px) !important;
-  -webkit-backdrop-filter: blur(8px) !important;
-}
-
-/* 12. 分割线 */
-hr, [class*="divider"], [class*="Divider"] {
-  border-color: rgba(255, 255, 255, 0.06) !important;
-}
-
-/* 13. 设置卡片中的行 */
-[class*="setting"],
-[class*="Setting"] {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
-}
-
-/* 14. 暗色模式微调 */
-.dark [class*="card"]:not([class*="flat"]),
+/* ── 暗色模式微调 ── */
+.dark [class*="card"],
 .dark [class*="Card"],
 .dark [class*="panel"],
-.dark [class*="Panel"] {
+.dark [class*="Panel"],
+.dark [class*="modal"],
+.dark [class*="Modal"] {
   background: rgba(0, 0, 0, 0.20) !important;
+  border-color: rgba(255, 255, 255, 0.04) !important;
+}
+
+.dark input:not([type="checkbox"]):not([type="radio"]),
+.dark textarea, .dark select {
+  background: rgba(0, 0, 0, 0.25) !important;
   border-color: rgba(255, 255, 255, 0.05) !important;
 }
 
-.dark input, .dark textarea, .dark select {
-  background: rgba(0, 0, 0, 0.25) !important;
-  border-color: rgba(255, 255, 255, 0.06) !important;
+/* ── 文本选中颜色 ── */
+::selection {
+  background: rgba(108, 140, 255, 0.30);
+  color: #fff;
+}
+
+/* ── 底部固定栏/Footer ── */
+[class*="footer"],
+[class*="Footer"] {
+  border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+  background: rgba(0, 0, 0, 0.15) !important;
+  backdrop-filter: blur(24px) !important;
 }

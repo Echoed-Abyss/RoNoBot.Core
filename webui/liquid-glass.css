@@ -1,0 +1,182 @@
+/* ===== RoNoBot.Core — Liquid Glass Theme Override ===== */
+/* 覆写 LLBot WebUI 为液态玻璃风格 + 深色蓝紫渐变背景 */
+
+/* 1. 全局背景 + 玻璃遮罩 */
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.10);
+  --accent-glass: #6c8cff;
+}
+
+html {
+  background: linear-gradient(135deg, #0f0c29 0%, #1a1a4e 30%, #24243e 60%, #0f0c29 100%) !important;
+  min-height: 100vh;
+}
+
+body {
+  background: linear-gradient(135deg, #0f0c29 0%, #1a1a4e 30%, #24243e 60%, #0f0c29 100%) !important;
+  min-height: 100vh;
+}
+
+/* 暗色模式覆盖（更深） */
+.dark html,
+.dark body {
+  background: #050510 !important;
+}
+
+/* 2. 卡片 → 液态玻璃 */
+[class*="card"]:not([class*="flat"]):not([class*="outline"]),
+[class*="Card"],
+[class*="panel"],
+[class*="Panel"],
+[class*="modal"],
+[class*="Modal"],
+[class*="dialog"],
+[class*="Dialog"] {
+  background: rgba(255, 255, 255, 0.06) !important;
+  backdrop-filter: blur(32px) !important;
+  -webkit-backdrop-filter: blur(32px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.30) !important;
+  border-radius: 1.25rem !important;
+}
+
+/* 3. 侧边栏 → 玻璃 */
+[class*="sidebar"],
+[class*="Sidebar"] {
+  background: rgba(255, 255, 255, 0.04) !important;
+  backdrop-filter: blur(40px) !important;
+  -webkit-backdrop-filter: blur(40px) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+/* 4. 导航项 → 玻璃胶囊 */
+[class*="nav-item"],
+[class*="NavItem"],
+nav a, nav button,
+[class*="menu-item"],
+[class*="MenuItem"] {
+  border-radius: 9999px !important;
+  transition: all 0.15s ease !important;
+}
+
+[class*="nav-item"]:hover,
+[class*="NavItem"]:hover,
+nav a:hover,
+[class*="menu-item"]:hover {
+  background: rgba(255, 255, 255, 0.10) !important;
+}
+
+[class*="nav-item"][class*="active"],
+[class*="NavItem"][class*="active"],
+nav a.active {
+  background: linear-gradient(135deg, #6c8cff, #a78bfa) !important;
+  box-shadow: 0 8px 24px rgba(108, 140, 255, 0.30) !important;
+}
+
+/* 5. 按钮 → 玻璃胶囊 */
+button:not([class*="icon"]):not([class*="Icon"]):not([class*="link"]):not([class*="Link"]):not([class*="ghost"]):not([class*="Ghost"]) {
+  border-radius: 9999px !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+button:not([class*="icon"]):not([class*="Icon"]):not([class*="link"]):not([class*="Link"]):not([class*="ghost"]):not([class*="Ghost"]):hover {
+  transform: scale(1.04);
+  box-shadow: 0 8px 24px rgba(108, 140, 255, 0.25) !important;
+}
+
+button:not([class*="icon"]):not([class*="Icon"]):not([class*="link"]):not([class*="Link"]):not([class*="ghost"]):not([class*="Ghost"]):active {
+  transform: scale(0.97);
+}
+
+/* 6. 主按钮 → 蓝紫渐变 */
+[class*="primary"],
+[class*="Primary"]:not([class*="ghost"]):not([class*="Ghost"]):not([class*="outline"]):not([class*="Outline"]) {
+  background: linear-gradient(135deg, #6c8cff, #a78bfa) !important;
+  border: none !important;
+  color: #fff !important;
+}
+
+/* 7. 输入框 → 玻璃输入 */
+input, textarea, select, [class*="input"], [class*="Input"] {
+  background: rgba(255, 255, 255, 0.06) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.10) !important;
+  border-radius: 0.75rem !important;
+  color: #fff !important;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+input:focus, textarea:focus, select:focus, [class*="input"]:focus {
+  border-color: #6c8cff !important;
+  box-shadow: 0 0 0 3px rgba(108, 140, 255, 0.20) !important;
+  outline: none !important;
+}
+
+/* 8. 强调色替换：粉色 → 蓝紫 */
+[style*="--pink-accent"] {
+  --pink-accent: #6c8cff !important;
+  --pink-accent-hover: #8fa6ff !important;
+}
+
+/* 9. 登录/加载对话框 → 玻璃叠加 */
+[class*="overlay"],
+[class*="Overlay"],
+[class*="backdrop"],
+[class*="Backdrop"] {
+  backdrop-filter: blur(8px) brightness(0.5) !important;
+  -webkit-backdrop-filter: blur(8px) brightness(0.5) !important;
+}
+
+/* 10. 滚动条 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.10);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.20);
+}
+
+/* 11. 徽章/Badge */
+[class*="badge"],
+[class*="Badge"] {
+  border-radius: 9999px !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+/* 12. 分割线 */
+hr, [class*="divider"], [class*="Divider"] {
+  border-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+/* 13. 设置卡片中的行 */
+[class*="setting"],
+[class*="Setting"] {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+/* 14. 暗色模式微调 */
+.dark [class*="card"]:not([class*="flat"]),
+.dark [class*="Card"],
+.dark [class*="panel"],
+.dark [class*="Panel"] {
+  background: rgba(0, 0, 0, 0.20) !important;
+  border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.dark input, .dark textarea, .dark select {
+  background: rgba(0, 0, 0, 0.25) !important;
+  border-color: rgba(255, 255, 255, 0.06) !important;
+}

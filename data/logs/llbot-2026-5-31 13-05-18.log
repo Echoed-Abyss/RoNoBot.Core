@@ -1,0 +1,63 @@
+2026-05-31 13:05:18 [I] root LLBot 7.12.15
+2026-05-31 13:05:18 [I] root [ 'C:\\Program Files\\nodejs\\node.exe', 'D:\\CloneProgramFile\\LuckyLilliaDesktop.Avalonia\\bin\\Debug\\net8.0\\bin\\llbot\\llbot.js', '--', '--pmhq-port=13000' ]
+2026-05-31 13:05:18 [I] webui-server Webui 服务器已启动 127.0.0.1:3080
+2026-05-31 13:05:18 [E] pmhq PMHQ WebSocket 连接错误，可能 QQ 未启动，正在等待 QQ 启动进行重连...
+2026-05-31 13:05:19 [I] pmhq PMHQ WebSocket 连接成功
+2026-05-31 13:06:35 [I] config 配置文件位于 D:\CloneProgramFile\LuckyLilliaDesktop.Avalonia\bin\Debug\net8.0\bin\llbot\data\config_2182344375.json
+2026-05-31 13:06:35 [I] sq-lite-driver auto creating table message
+2026-05-31 13:06:35 [I] sq-lite-driver auto creating table file
+2026-05-31 13:06:35 [I] sq-lite-driver auto creating table forward
+2026-05-31 13:06:35 [I] sq-lite-driver auto creating table group_member
+2026-05-31 13:06:37 [I] onebot11-adapter 群成员减少 { groupCode: 389880632, memberUid: 'u_llapvZfyd0WzQXfYBcsnMQ', type: 130, adminUid: '' }
+2026-05-31 13:06:37 [I] onebot11-adapter 群成员增加 { groupCode: 389880632, memberUid: 'u_UJs7UMW5ZAnwtcmcyNeKIQ', type: 130, adminUid: 'u_D39vyfQom31tUJwdGqc3bQ' }
+2026-05-31 13:06:37 [I] onebot11-adapter 群成员增加 { groupCode: 389880632, memberUid: 'u_vyeifIF_NJmQ50wXAHvdxw', type: 130, adminUid: 'u_c37MKekwXipZWrevZ18eHQ' }
+2026-05-31 13:06:37 [I] onebot11-adapter 群成员增加 { groupCode: 389880632, memberUid: 'u_zcjQzkPd5DItAZkR1nPppw', type: 130, adminUid: 'u_jTKvcNVTd-8QvnIVAKUZ_g' }
+2026-05-31 13:06:37 [I] onebot11-adapter 群成员减少 { groupCode: 389880632, memberUid: 'u_6YBVm6OlwATsJ__3z41rDw', type: 130, adminUid: '' }
+2026-05-31 13:06:37 [I] onebot11-adapter 群成员减少 { groupCode: 655751886, memberUid: 'u_83K9etrkdzamMZS1IQ2qUQ', type: 130, adminUid: '' }
+2026-05-31 13:06:37 [I] onebot11-adapter 群成员增加 { groupCode: 1015786696, memberUid: 'u_UJs7UMW5ZAnwtcmcyNeKIQ', type: 130, adminUid: 'u_17PZcDqeYANwQdpnGUlxcQ' }
+2026-05-31 13:06:37 [I] onebot11-adapter 群成员增加 { groupCode: 1016081462, memberUid: 'u_Do9LvWrIU28cYl6QAgsZ3w', type: 130, adminUid: 'u_irqABd54lw22ic9d9pAqYg' }
+2026-05-31 13:06:37 [I] onebot11-adapter 群成员增加 { groupCode: 809865831, memberUid: 'u_Mbr6S5F9QOpkWGZAZbsFRg', type: 130, adminUid: 'u_tVtYKshj-Mps77nSsMzQ8w' }
+2026-05-31 13:06:37 [I] onebot11-adapter 群成员增加 { groupCode: 591107812, memberUid: 'u_e9oNIu6x9eIGWuyGQe2kUg', type: 130, adminUid: 'u_5p6vVIhUJK04XadxlVDWKg' }
+2026-05-31 13:06:37 [I] onebot11-adapter 群成员增加 { groupCode: 591107812, memberUid: 'u_pr9VO53qEpXzz2M57HexFA', type: 130, adminUid: 'u_5p6vVIhUJK04XadxlVDWKg' }
+2026-05-31 13:06:37 [I] onebot11-adapter 群成员增加 { groupCode: 1091873536, memberUid: 'u_cmZi8vKln_ArB9a-vMVu5A', type: 130, adminUid: 'u_e-2a3g27wegY6d102KRLhQ' }
+2026-05-31 13:06:37 [I] onebot11-adapter 群成员减少 { groupCode: 591107812, memberUid: 'u_QRXSefgd_R0LFTRauS0FAg', type: 130, adminUid: '' }
+2026-05-31 13:06:37 [I] onebot11-adapter 群成员增加 { groupCode: 1036475754, memberUid: 'u_fZgQE8ln_98GGGH6A60I5g', type: 130, adminUid: 'u_kzrWfy_AA9TLizQuogy5Rw' }
+2026-05-31 13:06:37 [I] onebot11-adapter 群成员减少 { groupCode: 1036475754, memberUid: 'u_4fX5x5VGiwXWshA3wUdmJw', type: 130, adminUid: '' }
+2026-05-31 13:06:48 [I] core [收-群] 期许TZ(1059659818) Xiaonlyuan(2959954083)：
+                        那就不知道了
+2026-05-31 13:06:52 [E] onebot11-adapter get uin filed Error: invoke timeout, wrapperSession.getProfileService().getUserSimpleInfo, [ true, [ 'u_vyeifIF_NJmQ50wXAHvdxw' ] ]
+                            at Timeout._onTimeout (D:\CloneProgramFile\LuckyLilliaDesktop.Avalonia\bin\Debug\net8.0\bin\src\main\pmhq\base.ts:450:18)
+                            at listOnTimeout (node:internal/timers:605:17)
+                            at process.processTimers (node:internal/timers:541:7)
+2026-05-31 13:06:52 [E] onebot11-adapter get uin filed Error: invoke timeout, wrapperSession.getProfileService().getUserSimpleInfo, [ true, [ 'u_6YBVm6OlwATsJ__3z41rDw' ] ]
+                            at Timeout._onTimeout (D:\CloneProgramFile\LuckyLilliaDesktop.Avalonia\bin\Debug\net8.0\bin\src\main\pmhq\base.ts:450:18)
+                            at listOnTimeout (node:internal/timers:605:17)
+                            at process.processTimers (node:internal/timers:541:7)
+2026-05-31 13:06:52 [E] onebot11-adapter get uin filed Error: invoke timeout, wrapperSession.getProfileService().getUserSimpleInfo, [ true, [ 'u_zcjQzkPd5DItAZkR1nPppw' ] ]
+                            at Timeout._onTimeout (D:\CloneProgramFile\LuckyLilliaDesktop.Avalonia\bin\Debug\net8.0\bin\src\main\pmhq\base.ts:450:18)
+                            at listOnTimeout (node:internal/timers:605:17)
+                            at process.processTimers (node:internal/timers:541:7)
+2026-05-31 13:06:52 [E] onebot11-adapter get uin filed Error: invoke timeout, wrapperSession.getProfileService().getUserSimpleInfo, [ true, [ 'u_83K9etrkdzamMZS1IQ2qUQ' ] ]
+                            at Timeout._onTimeout (D:\CloneProgramFile\LuckyLilliaDesktop.Avalonia\bin\Debug\net8.0\bin\src\main\pmhq\base.ts:450:18)
+                            at listOnTimeout (node:internal/timers:605:17)
+                            at process.processTimers (node:internal/timers:541:7)
+2026-05-31 13:06:52 [E] onebot11-adapter get uin filed Error: invoke timeout, wrapperSession.getProfileService().getUserSimpleInfo, [ true, [ 'u_pr9VO53qEpXzz2M57HexFA' ] ]
+                            at Timeout._onTimeout (D:\CloneProgramFile\LuckyLilliaDesktop.Avalonia\bin\Debug\net8.0\bin\src\main\pmhq\base.ts:450:18)
+                            at listOnTimeout (node:internal/timers:605:17)
+                            at process.processTimers (node:internal/timers:541:7)
+2026-05-31 13:06:52 [E] onebot11-adapter get uin filed Error: invoke timeout, wrapperSession.getProfileService().getUserSimpleInfo, [ true, [ 'u_e9oNIu6x9eIGWuyGQe2kUg' ] ]
+                            at Timeout._onTimeout (D:\CloneProgramFile\LuckyLilliaDesktop.Avalonia\bin\Debug\net8.0\bin\src\main\pmhq\base.ts:450:18)
+                            at listOnTimeout (node:internal/timers:605:17)
+                            at process.processTimers (node:internal/timers:541:7)
+2026-05-31 13:06:52 [E] onebot11-adapter get uin filed Error: invoke timeout, wrapperSession.getProfileService().getUserSimpleInfo, [ true, [ 'u_cmZi8vKln_ArB9a-vMVu5A' ] ]
+                            at Timeout._onTimeout (D:\CloneProgramFile\LuckyLilliaDesktop.Avalonia\bin\Debug\net8.0\bin\src\main\pmhq\base.ts:450:18)
+                            at listOnTimeout (node:internal/timers:605:17)
+                            at process.processTimers (node:internal/timers:541:7)
+2026-05-31 13:06:58 [I] core [收-群] 期许TZ(1059659818) Xiaonlyuan(2959954083)：
+                        我可以打开
+2026-05-31 13:06:58 [I] core [收-群] 云平台-交流群(1081825655) 小九（收费解决问题，群内不处理售后）(430691296)：
+                        [图片]D7918AE96697EE3F853D35418BF77F0D.jpg
+2026-05-31 13:06:58 [I] ntqq-file-api 发包获取rkey成功, private:&rkey=CAISMLrtYSm5hwq1Pd8T6jUHa1tl9vVk212WjZj0XMclivziyj9v0vkiOSrP_cyvwHncuA, group:&rkey=CAMSMIANn9LpjuQjL1n-OjIKsNg6pUV0sOM1_ZkrN8d8v6ezzOoNyWwhwWTpFw99d5TMkA
+2026-05-31 13:07:13 [I] core [收-群] 云平台-交流群(1081825655) 执念太深(1766073242)：
+                        [图片]D7918AE96697EE3F853D35418BF77F0D.jpg
+2026-05-31 13:07:19 [I] onebot11-adapter 群成员减少 { groupCode: 389880632, memberUid: 'u_CObX_iLyfzstGfRGB-tw6w', type: 130, adminUid: '\x12\x02\b\x00' }

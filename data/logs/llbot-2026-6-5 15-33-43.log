@@ -1,0 +1,54 @@
+2026-06-05 15:33:43 [I] root LLBot 7.12.15
+2026-06-05 15:33:43 [I] root [ 'C:\\Program Files\\nodejs\\node.exe', 'D:\\CloneProgramFile\\LuckyLilliaDesktop.Avalonia\\bin\\Debug\\net8.0\\bin\\llbot\\llbot.js', '--', '--pmhq-port=13000' ]
+2026-06-05 15:33:43 [I] webui-server Webui 服务器已启动 127.0.0.1:3080
+2026-06-05 15:33:43 [I] pmhq PMHQ WebSocket 连接成功
+2026-06-05 15:33:49 [I] config 配置加载成功
+2026-06-05 15:33:49 [I] config 配置文件位于 D:\CloneProgramFile\LuckyLilliaDesktop.Avalonia\bin\Debug\net8.0\bin\llbot\data\config_2182344375.json
+2026-06-05 15:33:51 [I] onebot11-adapter 群成员增加 { groupCode: 1015786696, memberUid: 'u_RZKr1DeSB9PlJH5duqelMA', type: 130, adminUid: 'u_17PZcDqeYANwQdpnGUlxcQ' }
+2026-06-05 15:33:51 [I] onebot11-adapter 群成员增加 { groupCode: 309235874, memberUid: 'u_nxXGorYQSzBbk0ECa4luxg', type: 130, adminUid: 'u_H8vSxNP1BRP1kprNYDpiKQ' }
+2026-06-05 15:33:53 [I] core [收-群] lintの交友闲聊聚集地(774300665) -(25151090)：
+                        这傻逼插件
+2026-06-05 15:33:55 [I] core [收-群] lintの交友闲聊聚集地(774300665) -(25151090)：
+                        没招了
+2026-06-05 15:33:58 [I] core [收-群] 欢欢学习吹泡泡🫧群(964732874) 服务器www.idc712.cn(1347575150)：
+                        混合的也跌了
+2026-06-05 15:34:11 [I] core [收-群] lintの交友闲聊聚集地(774300665) 你若安好(3526362950)：
+                        [表情]未知表情
+2026-06-05 15:34:11 [I] onebot11-adapter 群表情回应 774300665 { target: { sequence: 496706 }, info: { code: '182', reactionType: 1, count: 1, operatorUid: 'u_KdPcQ7gL-1Hscu4yIhBI4A', actionType: 1 } }
+2026-06-05 15:34:18 [I] core [收-群] NexLab - User(977373775) Macy(1446696559)：
+                        @ReBot 我是Gay
+2026-06-05 15:34:21 [I] core [收-群] NexLab - User(977373775) Macy(1446696559)：
+                        @ReBot 我是Gay
+2026-06-05 15:34:22 [I] core [收-群] lintの交友闲聊聚集地(774300665) skylint(1453199662)：
+                        @ReBot 激活1077877156
+2026-06-05 15:34:23 [I] core [收-群] lintの交友闲聊聚集地(774300665) ReBot(2854198096)：
+                        ｜{随机语录}
+                        激活成功，消息将在5秒后撤回，欢迎使用Qnex云平台
+                        > Time: 2026-06-05 15:34:23
+                        点击领取免费卡密
+2026-06-05 15:34:25 [I] core [收-群] RO-Angel(241270854) 狐狸.宝宝⁧‭⁧~(2151559271)：
+                        睡觉
+2026-06-05 15:34:25 [I] core [收-群] lintの交友闲聊聚集地(774300665) 你若安好(3526362950)：
+                        查状态1283194118
+2026-06-05 15:34:26 [I] core [收-群] RO-Angel(241270854) 狐狸.宝宝⁧‭⁧~(2151559271)：
+                        [图片]3EA4776A1F39F5D4444FDFA852C7197C.jpg
+2026-06-05 15:34:26 [I] ntqq-file-api 发包获取rkey成功, private:&rkey=CAESMIydKTpcXVSZRpZrejGsB13sKsxCV79Ae52dcq1zKb80jLMFzIIl-agnbufoBcdV3Q, group:&rkey=CAQSMM1Pf5KLsGqnInb7YsEAMXrCyC7zNw9Z_M8uOHnFU0I8wOlJk_tNx3sfLuiebTZ3iQ
+2026-06-05 15:34:28 [I] core [收-群] lintの交友闲聊聚集地(774300665) ReBot(2854198096)：
+                        ｜你是我永远得不到的遗憾，祝你幸福。
+                        QQ：1283194118状态：异常
+                        > Time: 2026-06-05 15:34:26
+                        点击领取免费卡密
+2026-06-05 15:34:38 [I] core [收-群] lintの交友闲聊聚集地(774300665) skylint(1453199662)：
+                        没蛇主人
+2026-06-05 15:34:39 [I] core [收-群] lintの交友闲聊聚集地(774300665) 你若安好(3526362950)：
+                        异常是啥
+2026-06-05 15:34:39 [I] core [收-群] lintの交友闲聊聚集地(774300665) skylint(1453199662)：
+                        [图片]BE76BEAB0DD3355AF42B3592DAE08E25.jpg
+2026-06-05 15:34:47 [E] webui-server get uin filed Error: invoke timeout, wrapperSession.getProfileService().getUserSimpleInfo, [ true, [ 'u_invalid_______________' ] ]
+                            at Timeout._onTimeout (D:\CloneProgramFile\LuckyLilliaDesktop.Avalonia\bin\Debug\net8.0\bin\src\main\pmhq\base.ts:450:18)
+                            at listOnTimeout (node:internal/timers:605:17)
+                            at process.processTimers (node:internal/timers:541:7)
+2026-06-05 15:34:47 [E] webui-server get uin filed Error: invoke timeout, wrapperSession.getProfileService().getUserSimpleInfo, [ true, [ 'u_invalid_______________' ] ]
+                            at Timeout._onTimeout (D:\CloneProgramFile\LuckyLilliaDesktop.Avalonia\bin\Debug\net8.0\bin\src\main\pmhq\base.ts:450:18)
+                            at listOnTimeout (node:internal/timers:605:17)
+                            at process.processTimers (node:internal/timers:541:7)

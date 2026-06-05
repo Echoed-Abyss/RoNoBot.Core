@@ -1,0 +1,5 @@
+2026-06-05 14:51:51 [I] root LLBot 7.12.15
+2026-06-05 14:51:51 [I] root [ 'C:\\Program Files\\nodejs\\node.exe', 'D:\\CloneProgramFile\\LuckyLilliaDesktop.Avalonia\\bin\\Debug\\net8.0\\bin\\llbot\\llbot.js', '--', '--pmhq-port=13000' ]
+2026-06-05 14:51:51 [I] webui-server Webui 服务器已启动 127.0.0.1:3080
+2026-06-05 14:51:51 [I] pmhq PMHQ WebSocket 连接成功
+2026-06-05 14:52:35 [E] pmhq PMHQ WebSocket 连接错误，可能 QQ 未启动，正在等待 QQ 启动进行重连...

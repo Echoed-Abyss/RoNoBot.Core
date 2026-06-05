@@ -1,0 +1,51 @@
+2026-06-05 15:21:19 [I] root LLBot 7.12.15
+2026-06-05 15:21:19 [I] root [ 'C:\\Program Files\\nodejs\\node.exe', 'D:\\CloneProgramFile\\LuckyLilliaDesktop.Avalonia\\bin\\Debug\\net8.0\\bin\\llbot\\llbot.js', '--', '--pmhq-port=13000' ]
+2026-06-05 15:21:19 [I] webui-server Webui 服务器已启动 127.0.0.1:3080
+2026-06-05 15:21:19 [E] pmhq PMHQ WebSocket 连接错误，可能 QQ 未启动，正在等待 QQ 启动进行重连...
+2026-06-05 15:21:20 [I] pmhq PMHQ WebSocket 连接成功
+2026-06-05 15:21:49 [I] config 配置加载成功
+2026-06-05 15:21:49 [I] config 配置文件位于 D:\CloneProgramFile\LuckyLilliaDesktop.Avalonia\bin\Debug\net8.0\bin\llbot\data\config_2182344375.json
+2026-06-05 15:21:53 [I] core [收-群] 月溪小窝(437892843) 有毒(2503637088)：
+                        你🐔🐔怎么没了
+2026-06-05 15:21:55 [I] onebot11-adapter 群成员减少 { groupCode: 1015786696, memberUid: 'u_oqgQlnVY35CHjDOufkqKyQ', type: 130, adminUid: '\x12\x02\b\x00' }
+2026-06-05 15:22:03 [I] core [收-群] 网站源码技术交流(416105110) 快快云安全/霍霍-快快网络(98717253)：
+                        
+                        [图片]C0F921D81898B3FD30E754F3F6438430.png[表情]未知表情快快云加速盾重磅 AI 进化！🔥
+                        ✨无视攻击、节点无痛切换，游戏行业刚需爆品！
+                        ✨现在加入代理，无预存要求、无消费门槛，
+                        ✨3 个实例就能起步，前 3 个月专属扶持折扣8折起！
+                        [表情]未知表情私信【快快网络霍霍98717253】拿完整政策！
+2026-06-05 15:22:03 [I] ntqq-file-api 发包获取rkey成功, private:&rkey=CAMSMAivxY2zT9r12RvDpV4ttOB66-SLvOGv-X1c16BK22cotPbEuVYpcvcw0LN7uloKCA, group:&rkey=CAQSMGwjH58vPm-orVsuSomzYq3AHaZtd_oNgiMJrQ5uq9FhFYJCTNeHNGbFSACDNErWLw
+2026-06-05 15:22:13 [I] core [收-群] NexLab - User(977373775) QQ协议定制(493415861)：
+                        能接受多少钱的
+2026-06-05 15:22:14 [I] core [收-群] GTA线上交流群（九号基地）(591107812) pydan(3134396476)：
+                        找你售后兄弟
+2026-06-05 15:22:17 [I] core [收-群] GTA线上交流群（九号基地）(591107812) pydan(3134396476)：
+                        我没遇见过
+2026-06-05 15:22:23 [I] core [收-群] 月溪小窝(437892843) 𝓓𝓮𝓐𝓡思涵最温柔(3338974078)：
+                        剪了
+2026-06-05 15:22:27 [E] webui-server get uin filed Error: invoke timeout, wrapperSession.getProfileService().getUserSimpleInfo, [ true, [ 'u_invalid_______________' ] ]
+                            at Timeout._onTimeout (D:\CloneProgramFile\LuckyLilliaDesktop.Avalonia\bin\Debug\net8.0\bin\src\main\pmhq\base.ts:450:18)
+                            at listOnTimeout (node:internal/timers:605:17)
+                            at process.processTimers (node:internal/timers:541:7)
+2026-06-05 15:22:27 [E] webui-server get uin filed Error: invoke timeout, wrapperSession.getProfileService().getUserSimpleInfo, [ true, [ 'u_invalid_______________' ] ]
+                            at Timeout._onTimeout (D:\CloneProgramFile\LuckyLilliaDesktop.Avalonia\bin\Debug\net8.0\bin\src\main\pmhq\base.ts:450:18)
+                            at listOnTimeout (node:internal/timers:605:17)
+                            at process.processTimers (node:internal/timers:541:7)
+2026-06-05 15:22:33 [I] core [发-群] RO_投稿群(347439918) RO_吉祥物_投稿审核(2182344375)：
+                        666
+2026-06-05 15:22:35 [I] core [发-群] RO_投稿群(347439918) RO_吉祥物_投稿审核(2182344375)：
+                        高级
+2026-06-05 15:22:38 [I] core [收-群] GTA线上交流群（九号基地）(591107812) 恋夏(2743515734)：
+                        [视频]2253509eb9ff1926e05407d832fe8eb1.mp4
+2026-06-05 15:22:39 [I] onebot11-adapter 群成员增加 { groupCode: 309235874, memberUid: 'u_bhzkgiTP0E4F6WcsY2Vkag', type: 130, adminUid: 'u_H8vSxNP1BRP1kprNYDpiKQ' }
+2026-06-05 15:22:40 [I] core [收-群] GTA线上交流群（九号基地）(591107812) a.需要科技找我(2151314811)：
+                        @恋夏 售后是个好东西
+2026-06-05 15:22:41 [I] core [收-群] NexLab - User(977373775) 岗本(软件脚本定制)(1804181449)：
+                        30一万条
+2026-06-05 15:22:46 [I] core [收-群] NexLab - User(977373775) 岗本(软件脚本定制)(1804181449)：
+                        这样子
+2026-06-05 15:22:49 [I] core [收-群] GTA线上交流群（九号基地）(591107812) 恋夏(2743515734)：
+                        😋
+2026-06-05 15:22:58 [I] core [收-群] GtA5萌新交流群(389880632) 卡网🛒24h发货(20748145)：
+                        @2497561054 用电脑玩
